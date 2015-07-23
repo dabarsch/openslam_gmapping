@@ -20,11 +20,9 @@
  *
  *****************************************************************/
 
-
 #ifndef COMMANDLINE_H
 #define COMMANDLINE_H
 
-	
 #define parseFlag(name,value)\
 if (!strcmp(argv[c],name)){\
 	value=true;\
@@ -62,7 +60,7 @@ if (!strcmp(argv[c],name) && c<argc-1){\
 	int c=i;\
 	while (c<count){\
 		bool recognized=false;
-	
+
 #define CMD_PARSE_END\
 		if (!recognized)\
 			cout << "COMMAND LINE: parameter " << argv[c] << " not recognized" << endl;\
@@ -75,13 +73,12 @@ if (!strcmp(argv[c],name) && c<argc-1){\
 	int c=i;\
 	while (c<count){\
 		bool recognized=false;
-	
+
 #define CMD_PARSE_END_SILENT\
 		c++;\
 	}\
 }
 
-	
 #define parseFlagSilent(name,value)\
 if (!strcmp(argv[c],name)){\
 	value=true;\
